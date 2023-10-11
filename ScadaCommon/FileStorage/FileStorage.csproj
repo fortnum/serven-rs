@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ScadaCommon\ScadaCommon.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OuterPath>..\..\scada-v6\ScadaCommon\FileStorage</OuterPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="$(OuterPath)\**\*.cs" Exclude="$(OuterPath)\obj\**;$(OuterPath)\bin\**" LinkBase="\" />
+  </ItemGroup>
+
+</Project>

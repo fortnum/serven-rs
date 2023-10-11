@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <RootNamespace>Scada.Web.Plugins.PlgWebPage</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ScadaWeb\ScadaWebCommon\ScadaWebCommon.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <RsPath_Git>..\..\..\scada-v6\</RsPath_Git>
+    <RsPath_ThisProject>$(RsPath_Git)ScadaWeb\OpenPlugins\PlgWebPage\</RsPath_ThisProject>
+    <RsPath_ThisShared>$(RsPath_Git)ScadaWeb\OpenPlugins\PlgWebPage.Shared\</RsPath_ThisShared>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="$(RsPath_ThisProject)**\*.cs" Exclude="$(RsPath_ThisProject)obj\**;$(RsPath_ThisProject)bin\**" />
+    <Compile Include="$(RsPath_ThisShared)**\*.cs" />
+  </ItemGroup>
+
+</Project>

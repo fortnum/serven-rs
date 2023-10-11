@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+	  <RootNamespace>Scada.Agent.Engine</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ScadaAgentCommon\ScadaAgentCommon.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <RsPath_Git>..\..\..\scada-v6\</RsPath_Git>
+    <RsPath_ThisProject>$(RsPath_Git)ScadaAgent\ScadaAgent\ScadaAgentEngine\</RsPath_ThisProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="$(RsPath_ThisProject)**\*.cs" Exclude="$(RsPath_ThisProject)obj\**;$(RsPath_ThisProject)bin\**" />
+  </ItemGroup>
+
+</Project>

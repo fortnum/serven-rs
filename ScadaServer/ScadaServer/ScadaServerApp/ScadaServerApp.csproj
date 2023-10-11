@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ScadaServerEngine\ScadaServerEngine.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ScadaCommon\FileStorage\FileStorage.csproj" />
+    <ProjectReference Include="..\..\..\ScadaCommon\PostgreSqlStorage\PostgreSqlStorage.csproj" />
+  </ItemGroup>
+
+  
+  <PropertyGroup>
+    <OuterPath>..\..\..\scada-v6\ScadaServer\ScadaServer\ScadaServerApp</OuterPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="$(OuterPath)\**\*.cs" Exclude="$(OuterPath)\obj\**;$(OuterPath)\bin\**" LinkBase="\" />
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <None Update="Config\ScadaInstanceConfig.xml" CopyToOutputDirectory="Always" TargetPath="..\Config\ScadaInstanceConfig.xml" />
+    <None Update="Config\ScadaServerConfig.xml" CopyToOutputDirectory="Always" />
+  </ItemGroup>
+  
+    
+  <ItemGroup>
+    <ScadaAppDir Include="Log;Lang;Mod" />
+  </ItemGroup>
+  
+  <Target Name="CreateRequiredScadaAppDirs" AfterTargets="Build">
+    <MakeDir Directories="@(ScadaAppDir->'$(OutputPath)%(Identity)')" />
+  </Target>
+  
+  
+</Project>

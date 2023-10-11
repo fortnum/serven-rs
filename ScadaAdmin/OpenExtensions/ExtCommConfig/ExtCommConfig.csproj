@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <RootNamespace>Scada.Admin.Extensions.ExtCommConfig</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ScadaAdmin\ScadaAdminCommon\ScadaAdminCommon.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <RsPath_Git>..\..\..\scada-v6\</RsPath_Git>
+    <RsPath_ThisProject>$(RsPath_Git)ScadaAdmin\OpenExtensions\ExtCommConfig\</RsPath_ThisProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="$(RsPath_ThisProject)**\*.cs" Exclude="$(RsPath_ThisProject)obj\**;$(RsPath_ThisProject)bin\**" />
+    <None Include="$(RsPath_ThisProject)Lang\*.xml" LinkBase="Lang" CopyToOutputDirectory="Always" />
+    <EmbeddedResource Include="$(RsPath_ThisProject)**\*.resx" />
+  </ItemGroup>
+  
+</Project>

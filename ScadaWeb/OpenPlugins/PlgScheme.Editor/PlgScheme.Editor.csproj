@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWindowsForms>true</UseWindowsForms>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <RootNamespace>Scada.Web.Plugins.PlgScheme.Editor</RootNamespace>
+    <AssemblyName>ScadaSchemeEditor</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PlgScheme.Common\PlgScheme.Common.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <RsPath_Git>..\..\..\scada-v6\</RsPath_Git>
+    <RsPath_ThisProject>$(RsPath_Git)ScadaWeb\OpenPlugins\PlgScheme.Editor\</RsPath_ThisProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="$(RsPath_ThisProject)**\*.cs" Exclude="$(RsPath_ThisProject)obj\**;$(RsPath_ThisProject)bin\**" />
+    <None Include="$(RsPath_ThisProject)\Lang\*.xml" LinKBase="Lang" CopyToOutputDirectory="Always" />
+    <None Update="Config\ScadaSchemeEditorConfig.xml" CopyToOutputDirectory="Always" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <ApplicationIcon>$(RsPath_ThisProject)paintbrush.ico</ApplicationIcon>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <RootNamespace>Scada.Web.Plugins.PlgSchBasicComp.View</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ScadaWeb\ScadaWebCommon\ScadaWebCommon.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <RsPath_Git>..\..\..\scada-v6\</RsPath_Git>
+    <RsPath_ThisProject>$(RsPath_Git)ScadaWeb\OpenPlugins\PlgSchBasicComp.View\</RsPath_ThisProject>
+    <RsPath_ThisShared>$(RsPath_Git)ScadaWeb\OpenPlugins\PlgSchBasicComp.Shared\</RsPath_ThisShared>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="$(RsPath_ThisProject)**\*.cs" Exclude="$(RsPath_ThisProject)obj\**;$(RsPath_ThisProject)bin\**" />
+    <Compile Include="$(RsPath_ThisShared)**\*.cs" />
+  </ItemGroup>
+
+</Project>

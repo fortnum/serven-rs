@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ScadaAdminConfig>
+  <Extensions>
+    <Extension code="ExtCommConfig" />
+    <Extension code="ExtDepAgent" />
+    <Extension code="ExtDepPostgreSql" />
+    <Extension code="ExtProjectTools" />
+    <Extension code="ExtServerConfig" />    
+    <Extension code="ExtTableEditor" />
+    <Extension code="ExtWebConfig" />
+  </Extensions>
+  <FileAssociations>
+    <Association ext="sch" path="C:\Program Files\SCADA\ScadaSchemeEditor\ScadaSchemeEditor.exe" />
+  </FileAssociations>
+  <CustomOptions />
+</ScadaAdminConfig>

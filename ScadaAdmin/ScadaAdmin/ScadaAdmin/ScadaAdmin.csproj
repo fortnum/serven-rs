@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <RootNamespace>Scada.Admin.App</RootNamespace>
+  </PropertyGroup>
+    
+  <ItemGroup>
+    <ProjectReference Include="..\ScadaAdminCommon\ScadaAdminCommon.csproj" />
+    <ProjectReference Include="..\..\..\ScadaAgent\ScadaAgent\AgentClient\AgentClient.csproj" />
+  </ItemGroup>
+  
+  <PropertyGroup>
+    <PluginDirName>Lib\</PluginDirName>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PluginProjectReference Include="..\..\OpenExtensions\ExtCommConfig\ExtCommConfig.csproj" />
+    <PluginProjectReference Include="..\..\OpenExtensions\ExtDepAgent\ExtDepAgent.csproj" />
+    <PluginProjectReference Include="..\..\OpenExtensions\ExtDepPostgreSql\ExtDepPostgreSql.csproj" />
+    <PluginProjectReference Include="..\..\OpenExtensions\ExtProjectTools\ExtProjectTools.csproj" />
+    <PluginProjectReference Include="..\..\OpenExtensions\ExtServerConfig\ExtServerConfig.csproj" />
+    <PluginProjectReference Include="..\..\OpenExtensions\ExtTableEditor\ExtTableEditor.csproj" />
+    <PluginProjectReference Include="..\..\..\ScadaWeb\OpenPlugins\PlgMain.Common\PlgMain.Common.csproj" />
+    <PluginProjectReference Include="..\..\OpenExtensions\ExtWebConfig\ExtWebConfig.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="@(PluginProjectReference)" DestinationSubDirectory="$(PluginDirName)" />
+  </ItemGroup>
+  
+  <PropertyGroup>
+    <RsPath_Git>..\..\..\scada-v6\</RsPath_Git>
+    <RsPath_ThisProject>$(RsPath_Git)ScadaAdmin\ScadaAdmin\ScadaAdmin\</RsPath_ThisProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="$(RsPath_ThisProject)**\*.cs" Exclude="$(RsPath_ThisProject)obj\**;$(RsPath_ThisProject)bin\**" />
+    <EmbeddedResource Include="$(RsPath_ThisProject)**\*.resx" />
+    <None Update="Config\ScadaAdminConfig.xml" CopyToOutputDirectory="Always" />
+    <None Include="$(RsPath_ThisProject)Templates\**\*" LinkBase="Templates" CopyToOutputDirectory="Always" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <RsPath_ScadaCommCommon>$(RsPath_Git)ScadaComm\ScadaComm\ScadaCommCommon\</RsPath_ScadaCommCommon>
+    <RsPath_ScadaServerCommon>$(RsPath_Git)ScadaServer\ScadaServer\ScadaServerCommon\</RsPath_ScadaServerCommon>
+    <RsPath_ScadaWebCommon>$(RsPath_Git)ScadaWeb\ScadaWeb\ScadaWebCommon\</RsPath_ScadaWebCommon>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <None Include="$(RsPath_ScadaCommCommon)Config\ScadaCommConfig.xml" Link="Templates\EmptyProject.en-GB\Instances\Default\ScadaComm\Config\ScadaCommConfig.xml" CopyToOutputDirectory="Always" />
+    <None Include="$(RsPath_ScadaCommCommon)Config\ScadaCommConfig.xml" Link="Templates\EmptyProject.ru-RU\Instances\Default\ScadaComm\Config\ScadaCommConfig.xml" CopyToOutputDirectory="Always" />
+    <None Include="$(RsPath_ScadaServerCommon)Config\ScadaServerConfig.xml" Link="Templates\EmptyProject.en-GB\Instances\Default\ScadaServer\Config\ScadaServerConfig.xml" CopyToOutputDirectory="Always" />
+    <None Include="$(RsPath_ScadaServerCommon)Config\ScadaServerConfig.xml" Link="Templates\EmptyProject.ru-RU\Instances\Default\ScadaServer\Config\ScadaServerConfig.xml" CopyToOutputDirectory="Always" />
+    <None Include="$(RsPath_ScadaWebCommon)Config\ScadaWebConfig.xml" Link="Templates\EmptyProject.en-GB\Instances\Default\ScadaWeb\Config\ScadaWebConfig.xml" CopyToOutputDirectory="Always" />
+    <None Include="$(RsPath_ScadaWebCommon)Config\ScadaWebConfig.xml" Link="Templates\EmptyProject.ru-RU\Instances\Default\ScadaWeb\Config\ScadaWebConfig.xml" CopyToOutputDirectory="Always" />
+  </ItemGroup>
+
+</Project>

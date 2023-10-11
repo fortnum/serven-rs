@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWindowsForms>true</UseWindowsForms>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ScadaComm\ScadaCommCommon\ScadaCommCommon.csproj" />
+    <ProjectReference Include="..\..\..\ScadaCommon\ScadaCommon.Forms\ScadaCommon.Forms.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <SharedPath>..\..\..\scada-v6\ScadaComm\OpenDrivers\DrvTester.Shared</SharedPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="$(SharedPath)\**\*.cs" LinkBase="\" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OuterPath>..\..\..\scada-v6\ScadaComm\OpenDrivers\DrvTester.View</OuterPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="$(OuterPath)\**\*.cs" Exclude="$(OuterPath)\obj\**;$(OuterPath)\bin\**" LinkBase="\" />
+  </ItemGroup>
+
+</Project>

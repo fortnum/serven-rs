@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Systemd" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ScadaServerEngine\ScadaServerEngine.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OuterPath>..\..\..\scada-v6\ScadaServer\ScadaServer\ScadaServerWkr</OuterPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="$(OuterPath)\**\*.cs" Exclude="$(OuterPath)\obj\**;$(OuterPath)\bin\**" LinkBase="\" />
+  </ItemGroup>
+
+</Project>

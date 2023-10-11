@@ -1,0 +1,3 @@
+[submodule "scada-v6"]
+	path = scada-v6
+	url = https://github.com/RapidScada/scada-v6.git

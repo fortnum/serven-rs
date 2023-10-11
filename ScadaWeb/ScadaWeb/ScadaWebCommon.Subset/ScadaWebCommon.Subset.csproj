@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ScadaCommon\ScadaCommon\ScadaCommon.csproj" />
+  </ItemGroup>
+
+
+  <PropertyGroup>
+    <RsPath_Git>..\..\..\scada-v6\</RsPath_Git>
+    <RsPath_ThisProject>$(RsPath_Git)ScadaWeb\ScadaWeb\ScadaWebCommon.Subset\</RsPath_ThisProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="$(RsPath_ThisProject)**\*.cs" Exclude="$(RsPath_ThisProject)obj\**;$(RsPath_ThisProject)bin\**" LinkBase="\" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <RsPath_ScadaWebCommon>$(RsPath_Git)ScadaWeb\ScadaWeb\ScadaWebCommon\</RsPath_ScadaWebCommon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="$(RsPath_ScadaWebCommon)Config\DisplayOptions.cs" Link="Config\DisplayOptions.cs" />
+    <Compile Include="$(RsPath_ScadaWebCommon)Config\GeneralOptions.cs" Link="Config\GeneralOptions.cs" />
+    <Compile Include="$(RsPath_ScadaWebCommon)Config\LoginOptions.cs" Link="Config\LoginOptions.cs" />
+    <Compile Include="$(RsPath_ScadaWebCommon)Config\PluginAssignment.cs" Link="Config\PluginAssignment.cs" />
+    <Compile Include="$(RsPath_ScadaWebCommon)Config\WebConfig.cs" Link="Config\WebConfig.cs" />
+    <Compile Include="$(RsPath_ScadaWebCommon)Plugins\PluginView.cs" Link="Plugins\PluginView.cs" />
+    <Compile Include="$(RsPath_ScadaWebCommon)Plugins\PluginViewFactory.cs" Link="Plugins\PluginViewFactory.cs" />
+  </ItemGroup>
+
+</Project>

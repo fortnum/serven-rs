@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="WinControl" Version="2.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ScadaAgent\ScadaAgent\AgentClient\AgentClient.csproj" />
+    <ProjectReference Include="..\..\..\ScadaCommon\ScadaCommon.Forms\ScadaCommon.Forms.csproj" />
+    <ProjectReference Include="..\..\..\ScadaComm\ScadaComm\ScadaCommCommon\ScadaCommCommon.csproj" />
+    <ProjectReference Include="..\..\..\ScadaServer\ScadaServer\ScadaServerCommon\ScadaServerCommon.csproj" />
+    <ProjectReference Include="..\..\..\ScadaWeb\ScadaWeb\ScadaWebCommon\ScadaWebCommon.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OuterPath>..\..\..\scada-v6\ScadaAdmin\ScadaAdmin\ScadaAdminCommon</OuterPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="$(OuterPath)\**\*.cs" Exclude="$(OuterPath)\obj\**;$(OuterPath)\bin\**" LinkBase="\" />
+    <Content Include="$(OuterPath)\Lang\*.xml" LinkBase="Lang" CopyToOutputDirectory="Always" />
+  </ItemGroup>
+
+</Project>

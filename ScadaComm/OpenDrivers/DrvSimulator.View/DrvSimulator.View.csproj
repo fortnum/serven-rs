@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ScadaComm\ScadaCommCommon\ScadaCommCommon.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <SharedPath>..\..\..\scada-v6\ScadaComm\OpenDrivers\DrvSimulator.Shared</SharedPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="$(SharedPath)\**\*.cs" LinkBase="\" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OuterPath>..\..\..\scada-v6\ScadaComm\OpenDrivers\DrvSimulator.View</OuterPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="$(OuterPath)\**\*.cs" Exclude="$(OuterPath)\obj\**;$(OuterPath)\bin\**" LinkBase="\" />
+  </ItemGroup>
+
+
+</Project>

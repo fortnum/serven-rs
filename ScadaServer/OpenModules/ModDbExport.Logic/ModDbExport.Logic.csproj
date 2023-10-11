@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.0.31" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ScadaCommon\ScadaCommon.MultiDb\ScadaCommon.MultiDb.csproj" />
+    <ProjectReference Include="..\..\..\ScadaServer\ScadaServer\ScadaServerCommon\ScadaServerCommon.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <SharedPath>..\..\..\scada-v6\ScadaServer\OpenModules\ModDbExport.Shared</SharedPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="$(SharedPath)\**\*.cs" LinkBase="\" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OuterPath>..\..\..\scada-v6\ScadaServer\OpenModules\ModDbExport.Logic</OuterPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="$(OuterPath)\**\*.cs" Exclude="$(OuterPath)\obj\**;$(OuterPath)\bin\**" LinkBase="\" />
+  </ItemGroup>
+
+</Project>
