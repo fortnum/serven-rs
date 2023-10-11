@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <RsPath_Git>..\..\..\scada-v6\</RsPath_Git>
+    <RsPath_Git>..\..\scada-v6\</RsPath_Git>
     <RsPath_ThisProject>$(RsPath_Git)ScadaCommon\ScadaCommon.Log\</RsPath_ThisProject>
   </PropertyGroup>
 
