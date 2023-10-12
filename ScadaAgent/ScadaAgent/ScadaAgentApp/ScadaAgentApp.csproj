@@ -17,7 +17,8 @@
 
   <ItemGroup>
     <Compile Include="$(RsPath_ThisProject)**\*.cs" Exclude="$(RsPath_ThisProject)obj\**;$(RsPath_ThisProject)bin\**" />
-    <None Include="Config\ScadaAgentConfig.xml" CopyToOutputDirectory="true" />
+    <None Update="Config\ScadaInstanceConfig.xml" CopyToOutputDirectory="Always" TargetPath="..\Config\ScadaInstanceConfig.xml" />
+    <None Update="Config\ScadaAgentConfig.xml" CopyToOutputDirectory="Always" />
   </ItemGroup>
 
 </Project>
