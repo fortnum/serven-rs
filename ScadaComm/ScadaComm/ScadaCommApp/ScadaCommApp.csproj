@@ -5,6 +5,10 @@
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <OutDir>..\..\..\bin\ScadaComm\</OutDir>
+  </PropertyGroup>
+  
   <ItemGroup>
     <PackageReference Include="System.IO.Ports" Version="6.0.0" />
   </ItemGroup>

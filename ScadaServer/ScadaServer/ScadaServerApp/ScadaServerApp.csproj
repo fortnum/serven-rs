@@ -5,6 +5,10 @@
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <OutDir>..\..\..\bin\ScadaServer\</OutDir>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\ScadaServerEngine\ScadaServerEngine.csproj" />
   </ItemGroup>

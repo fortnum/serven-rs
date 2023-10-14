@@ -6,6 +6,10 @@
     <RootNamespace>Scada.Agent.App</RootNamespace>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <OutDir>..\..\..\bin\ScadaAgent\</OutDir>
+  </PropertyGroup>
+  
   <ItemGroup>
     <ProjectReference Include="..\ScadaAgentEngine\ScadaAgentEngine.csproj" />
   </ItemGroup>

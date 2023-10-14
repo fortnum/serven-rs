@@ -7,6 +7,10 @@
     <EnableWindowsTargeting>true</EnableWindowsTargeting>
     <RootNamespace>Scada.Admin.App</RootNamespace>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <OutDir>..\..\..\bin\ScadaAdmin\</OutDir>
+  </PropertyGroup>
     
   <ItemGroup>
     <ProjectReference Include="..\ScadaAdminCommon\ScadaAdminCommon.csproj" />
