@@ -12,7 +12,7 @@
     <Username>ScadaAgent</Username>
     <Password>B9D0F030265751578B00E9801C69320C</Password>
     <Instance>Default</Instance>
-    <Timeout>10000</Timeout>
+    <Timeout>3000</Timeout>
     <SecretKey>0E063D581B1DB27B8E984993DED65CE99284A706756C706C7F3B12C44BD55D4D</SecretKey>
   </ReverseConnection>
   <Instances>
@@ -21,7 +21,7 @@
       <Directory>C:\Program Files\SCADA\</Directory>
       <AdminUser>
         <Username>ScadaAdmin</Username>
-        <Password>B9D0F030265751578B00E9801C69320C</Password>
+        <Password>7535BB38E5CF7002EC355A9ED86CE85A</Password>
       </AdminUser>
     </Instance>
     <Instance active="false" name="Remote Site">

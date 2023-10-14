@@ -6,7 +6,7 @@
   <Connection>
     <Name>Default Connection</Name>
     <DBMS>PostgreSQL</DBMS>
-    <Server>194.226.49.245</Server>
+    <Server>kriss.ru</Server>
     <Database>rapid_scada</Database>
     <Username>postgres</Username>
     <Password>A92DD5CC0147196F08D9B273255B2359</Password>
