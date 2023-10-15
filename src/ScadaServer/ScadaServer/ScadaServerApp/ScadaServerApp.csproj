@@ -29,13 +29,13 @@
     <None Update="Config\ScadaServerConfig.xml" CopyToOutputDirectory="Always" />
   </ItemGroup>
   
-    
+  
   <ItemGroup>
     <ScadaAppDir Include="Log;Lang;Mod" />
   </ItemGroup>
   
   <Target Name="CreateRequiredScadaAppDirs" AfterTargets="Build">
-    <MakeDir Directories="@(ScadaAppDir->'$(OutputPath)%(Identity)')" />
+    <MakeDir Directories="@(ScadaAppDir->'$(OutDir)%(Identity)')" />
   </Target>
   
   
