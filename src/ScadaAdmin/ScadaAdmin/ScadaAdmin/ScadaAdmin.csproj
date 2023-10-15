@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <OutDir>..\..\..\bin\ScadaAdmin\</OutDir>
+    <OutDir>..\..\..\..\bin\ScadaAdmin\</OutDir>
   </PropertyGroup>
     
   <ItemGroup>

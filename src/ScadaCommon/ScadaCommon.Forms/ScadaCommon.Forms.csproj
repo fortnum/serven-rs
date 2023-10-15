@@ -6,7 +6,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <EnableWindowsTargeting>true</EnableWindowsTargeting>
   </PropertyGroup>
-    
+  
   <ItemGroup>
     <ProjectReference Include="..\ScadaCommon\ScadaCommon.csproj" />
   </ItemGroup>

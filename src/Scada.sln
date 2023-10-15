@@ -131,6 +131,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScadaCommApp", "ScadaComm\S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScadaServerCommon.Forms", "ScadaServer\ScadaServer\ScadaServerCommon.Forms\ScadaServerCommon.Forms.csproj", "{D1B3346F-85BB-42DB-AD07-DAAAE00A0263}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScadaWeb", "ScadaWeb\ScadaWeb\ScadaWeb\ScadaWeb.csproj", "{CA8BE13A-990B-466A-9104-9A97EB956D71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -325,6 +327,10 @@ Global
 		{D1B3346F-85BB-42DB-AD07-DAAAE00A0263}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1B3346F-85BB-42DB-AD07-DAAAE00A0263}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1B3346F-85BB-42DB-AD07-DAAAE00A0263}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA8BE13A-990B-466A-9104-9A97EB956D71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA8BE13A-990B-466A-9104-9A97EB956D71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA8BE13A-990B-466A-9104-9A97EB956D71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA8BE13A-990B-466A-9104-9A97EB956D71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -388,6 +394,7 @@ Global
 		{339C5956-929C-435D-9607-F35DD50CD790} = {4B9A6265-441C-45A7-A554-EF430CE830EE}
 		{7728A715-9A1E-407B-8450-3E8D2D2005BE} = {4B9A6265-441C-45A7-A554-EF430CE830EE}
 		{D1B3346F-85BB-42DB-AD07-DAAAE00A0263} = {FCBEA607-E45D-4644-A886-18E83F5118EE}
+		{CA8BE13A-990B-466A-9104-9A97EB956D71} = {06784607-02E0-4F28-95E2-2A64C12105C1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4B2AEE19-147C-4872-B3D6-492C601FB686}

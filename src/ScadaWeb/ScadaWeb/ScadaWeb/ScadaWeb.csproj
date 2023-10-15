@@ -6,6 +6,10 @@
     <UserSecretsId>3a1819be-265c-432d-a52b-86f3a2f19cc4</UserSecretsId>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <OutDir>..\..\..\..\bin\ScadaWeb\</OutDir>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="SkiaSharp" Version="2.88.6" />
     <PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="2.88.6" />
@@ -20,7 +24,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <RsPath_Git>..\..\..\scada-v6\</RsPath_Git>
+    <RsPath_Git>..\..\..\..\scada-v6\</RsPath_Git>
     <RsPath_ThisProject>$(RsPath_Git)ScadaWeb\ScadaWeb\ScadaWeb\</RsPath_ThisProject>
   </PropertyGroup>
 

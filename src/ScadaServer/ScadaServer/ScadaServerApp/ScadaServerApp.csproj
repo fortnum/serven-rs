@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <OutDir>..\..\..\bin\ScadaServer\</OutDir>
+    <OutDir>..\..\..\..\bin\ScadaServer\</OutDir>
   </PropertyGroup>
 
   <ItemGroup>

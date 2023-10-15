@@ -9,7 +9,6 @@
     <ProjectReference Include="..\..\..\ScadaCommon\ScadaCommon\ScadaCommon.csproj" />
   </ItemGroup>
 
-
   <PropertyGroup>
     <RsPath_Git>..\..\..\..\scada-v6\</RsPath_Git>
     <RsPath_ThisProject>$(RsPath_Git)ScadaWeb\ScadaWeb\ScadaWebCommon.Subset\</RsPath_ThisProject>
