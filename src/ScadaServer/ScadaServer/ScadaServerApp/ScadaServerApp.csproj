@@ -24,9 +24,11 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <Compile Include="$(RsPath_ThisProject)**\*.cs" Exclude="$(RsPath_ThisProject)obj\**;$(RsPath_ThisProject)bin\**" LinkBase="\" />
+    <Compile Include="$(RsPath_ThisProject)**\*.cs" Exclude="$(RsPath_ThisProject)obj\**;$(RsPath_ThisProject)bin\**" />
     <None Update="Config\ScadaInstanceConfig.xml" CopyToOutputDirectory="Always" TargetPath="..\Config\ScadaInstanceConfig.xml" />
     <None Update="Config\ScadaServerConfig.xml" CopyToOutputDirectory="Always" />
+    <None Include="$(RsPath_ThisProject)..\..\Script\Windows\svc_*.bat" Exclude="$(RsPath_ThisProject)..\..\Script\Windows\svc_*install.bat" CopyToOutputDirectory="Always" />
+    <None Include="$(RsPath_ThisProject)..\..\Script\Linux\svc_*.sh" CopyToOutputDirectory="Always" />
   </ItemGroup>
   
   
