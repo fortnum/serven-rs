@@ -7,11 +7,11 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <OutDir>..\..\..\bin\ScadaAgent\</OutDir>
+    <OutDir>..\..\..\..\bin\ScadaAgent\</OutDir>
   </PropertyGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\..\ScadaAgentEngine\ScadaAgentEngine.csproj" />
+    <ProjectReference Include="..\ScadaAgentEngine\ScadaAgentEngine.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
