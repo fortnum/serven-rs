@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <RsPath_Git>..\..\..\scada-v6\</RsPath_Git>
+    <RsPath_Git>..\..\..\..\scada-v6\</RsPath_Git>
     <RsPath_ThisProject>$(RsPath_Git)ScadaAdmin\OpenExtensions\ExtDepPostgreSql\</RsPath_ThisProject>
   </PropertyGroup>
 

@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <OuterPath>..\..\..\scada-v6\ScadaComm\OpenDrivers\DrvOpcUa.Common</OuterPath>
+    <OuterPath>..\..\..\..\scada-v6\ScadaComm\OpenDrivers\DrvOpcUa.Common</OuterPath>
   </PropertyGroup>
 
   <ItemGroup>

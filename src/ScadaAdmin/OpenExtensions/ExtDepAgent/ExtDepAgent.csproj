@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <RsPath_Git>..\..\..\scada-v6\</RsPath_Git>
+    <RsPath_Git>..\..\..\..\scada-v6\</RsPath_Git>
     <RsPath_ThisProject>$(RsPath_Git)ScadaAdmin\OpenExtensions\ExtDepAgent\</RsPath_ThisProject>
   </PropertyGroup>
 

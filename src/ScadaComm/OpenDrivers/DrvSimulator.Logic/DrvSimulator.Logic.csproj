@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <SharedPath>..\..\..\scada-v6\ScadaComm\OpenDrivers\DrvSimulator.Shared</SharedPath>
+    <SharedPath>..\..\..\..\scada-v6\ScadaComm\OpenDrivers\DrvSimulator.Shared</SharedPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <OuterPath>..\..\..\scada-v6\ScadaComm\OpenDrivers\DrvSimulator.Logic</OuterPath>
+    <OuterPath>..\..\..\..\scada-v6\ScadaComm\OpenDrivers\DrvSimulator.Logic</OuterPath>
   </PropertyGroup>
 
   <ItemGroup>

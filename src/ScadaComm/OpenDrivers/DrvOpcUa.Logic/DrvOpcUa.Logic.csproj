@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <OuterPath>..\..\..\scada-v6\ScadaComm\OpenDrivers\DrvOpcUa.Logic</OuterPath>
+    <OuterPath>..\..\..\..\scada-v6\ScadaComm\OpenDrivers\DrvOpcUa.Logic</OuterPath>
   </PropertyGroup>
 
   <ItemGroup>

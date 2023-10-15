@@ -1,0 +1,8 @@
+<Project>
+
+  <Target Name="Build"
+          Condition=" $(ImportWindowsDesktopTargets) != false and '$(_InvalidConfigurationWarning)' != 'true' "
+          DependsOnTargets="$(BuildDependsOn)"
+          Returns="@(TargetPathWithTargetPlatformMoniker)" />
+  
+</Project>

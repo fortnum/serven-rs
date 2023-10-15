@@ -37,7 +37,7 @@
   </ItemGroup>
   
   <PropertyGroup>
-    <RsPath_Git>..\..\..\scada-v6\</RsPath_Git>
+    <RsPath_Git>..\..\..\..\scada-v6\</RsPath_Git>
     <RsPath_ThisProject>$(RsPath_Git)ScadaAdmin\ScadaAdmin\ScadaAdmin\</RsPath_ThisProject>
   </PropertyGroup>
 

@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <SharedPath>..\..\..\scada-v6\ScadaComm\OpenDrivers\DrvTester.Shared</SharedPath>
+    <SharedPath>..\..\..\..\scada-v6\ScadaComm\OpenDrivers\DrvTester.Shared</SharedPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <OuterPath>..\..\..\scada-v6\ScadaComm\OpenDrivers\DrvTester.Logic</OuterPath>
+    <OuterPath>..\..\..\..\scada-v6\ScadaComm\OpenDrivers\DrvTester.Logic</OuterPath>
   </PropertyGroup>
 
   <ItemGroup>

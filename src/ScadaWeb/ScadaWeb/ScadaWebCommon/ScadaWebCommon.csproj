@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <OuterPath>..\..\..\scada-v6\ScadaWeb\ScadaWeb\ScadaWebCommon</OuterPath>
+    <OuterPath>..\..\..\..\scada-v6\ScadaWeb\ScadaWeb\ScadaWebCommon</OuterPath>
   </PropertyGroup>
 
   <ItemGroup>

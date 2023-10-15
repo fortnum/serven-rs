@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <SharedPath>..\..\..\scada-v6\ScadaServer\OpenModules\ModDbExport.Shared</SharedPath>
+    <SharedPath>..\..\..\..\scada-v6\ScadaServer\OpenModules\ModDbExport.Shared</SharedPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <OuterPath>..\..\..\scada-v6\ScadaServer\OpenModules\ModDbExport.View</OuterPath>
+    <OuterPath>..\..\..\..\scada-v6\ScadaServer\OpenModules\ModDbExport.View</OuterPath>
   </PropertyGroup>
 
   <ItemGroup>

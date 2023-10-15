@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <OuterPath>..\..\scada-v6\ScadaCommon\ScadaCommon.MultiDb</OuterPath>
+    <OuterPath>..\..\..\scada-v6\ScadaCommon\ScadaCommon.MultiDb</OuterPath>
   </PropertyGroup>
 
   <ItemGroup>

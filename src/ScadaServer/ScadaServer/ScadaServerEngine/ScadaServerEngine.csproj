@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <OuterPath>..\..\..\scada-v6\ScadaServer\ScadaServer\ScadaServerEngine</OuterPath>
+    <OuterPath>..\..\..\..\scada-v6\ScadaServer\ScadaServer\ScadaServerEngine</OuterPath>
   </PropertyGroup>
 
   <ItemGroup>

@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <SharedPath>..\..\..\scada-v6\ScadaServer\OpenModules\ModArcBasic.Shared</SharedPath>
+    <SharedPath>..\..\..\..\scada-v6\ScadaServer\OpenModules\ModArcBasic.Shared</SharedPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <OuterPath>..\..\..\scada-v6\ScadaServer\OpenModules\ModArcBasic.Logic</OuterPath>
+    <OuterPath>..\..\..\..\scada-v6\ScadaServer\OpenModules\ModArcBasic.Logic</OuterPath>
   </PropertyGroup>
 
   <ItemGroup>

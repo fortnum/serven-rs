@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <OuterPath>..\..\..\scada-v6\ScadaComm\OpenDrivers\DrvOpcUa.View</OuterPath>
+    <OuterPath>..\..\..\..\scada-v6\ScadaComm\OpenDrivers\DrvOpcUa.View</OuterPath>
   </PropertyGroup>
 
   <ItemGroup>

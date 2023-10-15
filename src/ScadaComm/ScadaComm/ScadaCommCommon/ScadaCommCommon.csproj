@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <OuterPath>..\..\..\scada-v6\ScadaComm\ScadaComm\ScadaCommCommon</OuterPath>
+    <OuterPath>..\..\..\..\scada-v6\ScadaComm\ScadaComm\ScadaCommCommon</OuterPath>
   </PropertyGroup>
 
   <ItemGroup>
