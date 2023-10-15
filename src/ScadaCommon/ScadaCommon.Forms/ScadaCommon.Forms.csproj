@@ -1,4 +1,6 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project>
+
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
 
   <PropertyGroup>
     <TargetFramework>net6.0-windows</TargetFramework>
@@ -6,7 +8,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <EnableWindowsTargeting>true</EnableWindowsTargeting>
   </PropertyGroup>
-
+    
   <ItemGroup>
     <ProjectReference Include="..\ScadaCommon\ScadaCommon.csproj" />
   </ItemGroup>
@@ -18,5 +20,13 @@
   <ItemGroup>
     <Compile Include="$(OuterPath)\**\*.cs" Exclude="$(OuterPath)\obj\**;$(OuterPath)\bin\**" LinkBase="\" />
   </ItemGroup>
+
+  <PropertyGroup Condition="!$([MSBuild]::IsOsPlatform('Windows'))">
+    <ImportWindowsDesktopTargets>false</ImportWindowsDesktopTargets>
+  </PropertyGroup>
+
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+
+  <Target Name="Build" Condition=" $([MSBuild]::IsOsPlatform('Windows')) and '$(_InvalidConfigurationWarning)' != 'true' " DependsOnTargets="$(BuildDependsOn)" Returns="@(TargetPathWithTargetPlatformMoniker)" />
 
 </Project>

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -12,5 +12,5 @@
   <ItemGroup>
     <Compile Include="$(RsPath_ThisProject)**\*.cs" Exclude="$(RsPath_ThisProject)obj\**;$(RsPath_ThisProject)bin\**" />
   </ItemGroup>
-
+  
 </Project>
