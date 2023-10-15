@@ -10,7 +10,7 @@
   </GeneralOptions>
   <ConnectionOptions>
     <Name>Default Connection</Name>
-    <Host>localhost</Host>
+    <Host>kriss.ru</Host>
     <Port>10000</Port>
     <Username>ScadaWeb</Username>
     <Password>B9D0F030265751578B00E9801C69320C</Password>

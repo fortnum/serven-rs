@@ -17,6 +17,16 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ScadaWebCommon\ScadaWebCommon.csproj" />
+    <ProjectReference Include="..\..\..\ScadaCommon\PostgreSqlStorage\PostgreSqlStorage.csproj" />
+    <ProjectReference Include="..\..\..\ScadaCommon\FileStorage\FileStorage.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\OpenPlugins\PlgChart\PlgChart.csproj" />
+    <ProjectReference Include="..\..\OpenPlugins\PlgMain\PlgMain.csproj" />
+    <ProjectReference Include="..\..\OpenPlugins\PlgScheme\PlgScheme.csproj" />
+    <ProjectReference Include="..\..\OpenPlugins\PlgSchBasicComp\PlgSchBasicComp.csproj" />
+    <ProjectReference Include="..\..\OpenPlugins\PlgWebPage\PlgWebPage.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,9 +39,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="$(RsPath_ThisProject)**\*.cs" Exclude="$(RsPath_ThisProject)obj\**;$(RsPath_ThisProject)bin\**" />
+    <Compile Include="$(RsPath_ThisProject)**\*.cs" Exclude="$(RsPath_ThisProject)obj\**;$(RsPath_ThisProject)bin\**;$(RsPath_ThisProject)wwwroot\**" />
+    <Content Include="$(RsPath_ThisProject)**\*.cshtml" Exclude="$(RsPath_ThisProject)obj\**;$(RsPath_ThisProject)bin\**;$(RsPath_ThisProject)wwwroot\**" />
+    <Content Include="$(RsPath_ThisProject)wwwroot\**" LinkBase="wwwroot" CopyToOutputDirectory="Always" />    
+    <None Update="Config\ScadaInstanceConfig.xml" CopyToOutputDirectory="Always" TargetPath="..\Config\ScadaInstanceConfig.xml" />
     <None Include="$(RsPath_ThisProject)compilerconfig.json" />
     <None Include="$(RsPath_ThisProject)libman.json" />
   </ItemGroup>
+
+  <Target Name="CorrectLinkResolvedProjectStaticWebAssets" AfterTargets="ResolveProjectStaticWebAssets">
+    <ItemGroup>
+      <StaticWebAsset ContentRoot="$(RsPath_ThisProject)wwwroot\" />
+    </ItemGroup>
+  </Target>
 
 </Project>
