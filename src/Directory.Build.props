@@ -1,7 +1,0 @@
-<Project>
-  
-  <PropertyGroup Condition="!$([MSBuild]::IsOsPlatform('Windows'))">
-    <ImportWindowsDesktopTargets>false</ImportWindowsDesktopTargets>
-  </PropertyGroup>
-  
-</Project>

@@ -1,5 +1,9 @@
 <Project>
 
+  <PropertyGroup Condition="$(EnableWindowsTargeting) == true and !$([MSBuild]::IsOsPlatform('Windows'))">
+    <ImportWindowsDesktopTargets>false</ImportWindowsDesktopTargets>
+  </PropertyGroup>
+
   <Target Name="Build"
           Condition=" $(ImportWindowsDesktopTargets) != false and '$(_InvalidConfigurationWarning)' != 'true' "
           DependsOnTargets="$(BuildDependsOn)"
