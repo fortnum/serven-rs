@@ -1,14 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <AssemblyName>ServenViewExplorerPlugin</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ScadaCommon\ScadaCommon.csproj" />
+    <ProjectReference Include="..\..\ScadaWeb\ScadaWeb\ScadaWebCommon\ScadaWebCommon.csproj" />
   </ItemGroup>
 
 </Project>

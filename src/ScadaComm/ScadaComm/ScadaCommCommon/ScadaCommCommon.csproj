@@ -9,12 +9,12 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <OuterPath>..\..\..\..\scada-v6\ScadaComm\ScadaComm\ScadaCommCommon</OuterPath>
+    <RsPath_ThisProject>$(RsPath_Git)ScadaComm\ScadaComm\ScadaCommCommon\</RsPath_ThisProject>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="$(OuterPath)\**\*.cs" Exclude="$(OuterPath)\obj\**;$(OuterPath)\bin\**" LinkBase="\" />
-    <Content Include="$(OuterPath)\Lang\*.xml" LinkBase="Lang" CopyToOutputDirectory="Always" />
+    <Compile Include="$(RsPath_ThisProject)**\*.cs" Exclude="$(RsPath_ThisProject)obj\**;$(RsPath_ThisProject)bin\**" />
+    <Content Include="$(RsPath_ThisProject)Lang\*.xml" LinkBase="Lang" CopyToOutputDirectory="Always" />
   </ItemGroup>
 
 </Project>

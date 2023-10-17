@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -12,14 +12,15 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <RsPath_Git>..\..\..\..\scada-v6\</RsPath_Git>
     <RsPath_ThisProject>$(RsPath_Git)ScadaWeb\OpenPlugins\PlgScheme.EditorWeb\</RsPath_ThisProject>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Include="$(RsPath_ThisProject)**\*.cs" Exclude="$(RsPath_ThisProject)obj\**;$(RsPath_ThisProject)bin\**" />
-    <None Include="$(RsPath_ThisProject)Lang\*.xml" LinkBase="Lang" CopyToOutputDirectory="Always" />
-    <None Update="Config\ScadaSchemeEditorConfig.xml" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="$(RsPath_ThisProject)**\*.cshtml" />
+    <Content Include="$(RsPath_ThisProject)Lang\*.xml" LinkBase="Lang" CopyToOutputDirectory="Always" />
+    <Content Update="Config\ScadaSchemeEditorConfig.xml" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="$(RsPath_ThisProject)wwwroot\**" LinkBase="wwwroot" />
   </ItemGroup>
 
   <ItemGroup>

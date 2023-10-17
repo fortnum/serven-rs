@@ -13,14 +13,21 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <RsPath_Git>..\..\..\scada-v6\</RsPath_Git>
     <RsPath_ThisProject>$(RsPath_Git)ScadaWeb\OpenPlugins\PlgSchBasicComp\</RsPath_ThisProject>
     <RsPath_ThisShared>$(RsPath_Git)ScadaWeb\OpenPlugins\PlgSchBasicComp.Shared\</RsPath_ThisShared>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Include="$(RsPath_ThisProject)**\*.cs" Exclude="$(RsPath_ThisProject)obj\**;$(RsPath_ThisProject)bin\**" />
-    <Compile Include="$(RsPath_ThisShared)**\*.cs" />
+    <Content Include="$(RsPath_ThisProject)**\*.cshtml" />
+    <Content Include="$(RsPath_ThisProject)wwwroot\plugins\**" LinkBase="wwwroot\plugins" />
+    <Compile Include="$(RsPath_ThisShared)**\*.cs" />    
   </ItemGroup>
+
+  <Target Name="Coerce_ResolveProjectStaticWebAssets_Unlink_ContentRoot" AfterTargets="ResolveProjectStaticWebAssets">
+    <ItemGroup>
+      <StaticWebAsset ContentRoot="$(RsPath_ThisProject)wwwroot\" />
+    </ItemGroup>
+  </Target>
 
 </Project>

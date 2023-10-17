@@ -10,11 +10,11 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <OuterPath>..\..\..\..\scada-v6\ScadaComm\OpenDrivers\DrvOpcUa.Logic</OuterPath>
+    <RsPath_ThisProject>$(RsPath_Git)ScadaComm\OpenDrivers\DrvOpcUa.Logic\</RsPath_ThisProject>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="$(OuterPath)\**\*.cs" Exclude="$(OuterPath)\obj\**;$(OuterPath)\bin\**" LinkBase="\" />
+    <Compile Include="$(RsPath_ThisProject)**\*.cs" Exclude="$(RsPath_ThisProject)obj\**;$(RsPath_ThisProject)bin\**" />
   </ItemGroup>
 
 </Project>

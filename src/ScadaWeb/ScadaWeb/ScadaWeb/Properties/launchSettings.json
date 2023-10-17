@@ -4,9 +4,11 @@
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "COMPlus_ReadyToRun": "0"
       },
-      "applicationUrl": "https://localhost:59411;http://localhost:59412"
+      "applicationUrl": "https://localhost:59411;http://localhost:59412",
+      "launchUrl": "View"
     }
   }
 }

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -17,16 +17,21 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <RsPath_Git>..\..\..\scada-v6\</RsPath_Git>
     <RsPath_ThisProject>$(RsPath_Git)ScadaWeb\OpenPlugins\PlgMain\</RsPath_ThisProject>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Include="$(RsPath_ThisProject)**\*.cs" Exclude="$(RsPath_ThisProject)obj\**;$(RsPath_ThisProject)bin\**" />
+    <Content Include="$(RsPath_ThisProject)**\*.cshtml" />
+    <Content Include="$(RsPath_ThisProject)Lang\*.xml" LinkBase="Lang" CopyToOutputDirectory="Always" />
+    <Content Include="$(RsPath_ThisProject)wwwroot\plugins\**" LinkBase="wwwroot\plugins" />
+    <Content Include="$(RsPath_ThisProject)compilerconfig.json" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Include="$(RsPath_ThisProject)compilerconfig.json" />
-  </ItemGroup>
+  <Target Name="Coerce_ResolveProjectStaticWebAssets_Unlink_ContentRoot" AfterTargets="ResolveProjectStaticWebAssets">
+    <ItemGroup>
+      <StaticWebAsset ContentRoot="$(RsPath_ThisProject)wwwroot\" />
+    </ItemGroup>
+  </Target>
   
 </Project>

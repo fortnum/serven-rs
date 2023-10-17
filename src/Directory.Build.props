@@ -1,0 +1,7 @@
+<Project>
+
+  <PropertyGroup>
+    <RsPath_Git>$([System.IO.Path]::GetFullPath('..\scada-v6\'))</RsPath_Git>
+  </PropertyGroup>
+  
+</Project>

@@ -13,7 +13,6 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <RsPath_Git>..\..\..\..\scada-v6\</RsPath_Git>
     <RsPath_ThisProject>$(RsPath_Git)ScadaWeb\OpenPlugins\PlgChart.View\</RsPath_ThisProject>
   </PropertyGroup>
 

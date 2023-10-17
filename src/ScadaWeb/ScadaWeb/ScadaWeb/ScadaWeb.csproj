@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -7,7 +7,8 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <OutDir>..\..\..\..\bin\ScadaWeb\</OutDir>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>..\..\..\..\bin\ScadaWeb\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -30,26 +31,36 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Serven\ViewExplorerPlugin\ViewExplorerPlugin.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <_ContentIncludedByDefault Remove="compilerconfig.json" />
   </ItemGroup>
 
   <PropertyGroup>
-    <RsPath_Git>..\..\..\..\scada-v6\</RsPath_Git>
     <RsPath_ThisProject>$(RsPath_Git)ScadaWeb\ScadaWeb\ScadaWeb\</RsPath_ThisProject>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Include="$(RsPath_ThisProject)**\*.cs" Exclude="$(RsPath_ThisProject)obj\**;$(RsPath_ThisProject)bin\**;$(RsPath_ThisProject)wwwroot\**" />
     <Content Include="$(RsPath_ThisProject)**\*.cshtml" Exclude="$(RsPath_ThisProject)obj\**;$(RsPath_ThisProject)bin\**;$(RsPath_ThisProject)wwwroot\**" />
-    <Content Include="$(RsPath_ThisProject)wwwroot\**" LinkBase="wwwroot" CopyToOutputDirectory="Always" />    
+    <Content Include="$(RsPath_ThisProject)wwwroot\**" LinkBase="wwwroot" />
     <None Update="Config\ScadaInstanceConfig.xml" CopyToOutputDirectory="Always" TargetPath="..\Config\ScadaInstanceConfig.xml" />
+    <None Update="Config\ScadaWebConfig.xml" CopyToOutputDirectory="PreserveNewest" />
     <None Include="$(RsPath_ThisProject)compilerconfig.json" />
     <None Include="$(RsPath_ThisProject)libman.json" />
   </ItemGroup>
 
-  <Target Name="CorrectLinkResolvedProjectStaticWebAssets" AfterTargets="ResolveProjectStaticWebAssets">
+  <Target Name="Coerce_ResolveProjectStaticWebAssets_Unlink_ContentRoot" AfterTargets="ResolveProjectStaticWebAssets">
     <ItemGroup>
       <StaticWebAsset ContentRoot="$(RsPath_ThisProject)wwwroot\" />
+    </ItemGroup>
+  </Target>
+
+  <Target Name="Coerce_ReferencedProjectsStaticWebAssets_Flatten_BasePath" AfterTargets="ResolveReferencedProjectsStaticWebAssets">
+    <ItemGroup>
+      <StaticWebAsset Condition="'%(SourceType)' == 'Project'" BasePath="/" />
     </ItemGroup>
   </Target>
 

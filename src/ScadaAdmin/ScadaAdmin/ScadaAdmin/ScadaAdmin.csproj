@@ -44,7 +44,7 @@
   <ItemGroup>
     <Compile Include="$(RsPath_ThisProject)**\*.cs" Exclude="$(RsPath_ThisProject)obj\**;$(RsPath_ThisProject)bin\**" />
     <EmbeddedResource Include="$(RsPath_ThisProject)**\*.resx" />
-    <None Update="Config\ScadaAdminConfig.xml" CopyToOutputDirectory="Always" />
+    <None Update="Config\ScadaAdminConfig.xml" CopyToOutputDirectory="PreserveNewest" />
     <None Include="$(RsPath_ThisProject)Templates\**\*" LinkBase="Templates" CopyToOutputDirectory="Always" />
   </ItemGroup>
 
