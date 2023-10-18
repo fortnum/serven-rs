@@ -24,7 +24,6 @@
     <ItemGroup>
       <ContentWithTargetPath Update="@(StaticWebAsset)" TargetPath="plugins/@serven/viewExplorerPlugin/%(TargetPath)" />
     </ItemGroup>
-    <Message Text="@(ContentWithTargetPath->Metadata('TargetPath'))" Importance="high" />
   </Target>
 
 </Project>
