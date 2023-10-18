@@ -64,4 +64,6 @@ public class ServenViewExplorerPluginLogic : PluginLogic, IPageFilter, IResultFi
     public void OnResourceExecuted(ResourceExecutedContext context)
     {
     }
+
+    public override string ClientScript => "(function f(s) { $.getScript(s).fail( () => setTimeout(() => f(s), 1000) ) })('/plugins/@serven/viewExplorerPlugin/main.js')";
 }
