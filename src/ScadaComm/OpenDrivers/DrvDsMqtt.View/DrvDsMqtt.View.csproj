@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>Scada.Comm.Drivers.DrvDsMqtt.View</RootNamespace>
+    <Version>6.0.0</Version>
+    <AssemblyVersion>6.0.0.2</AssemblyVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWindowsForms>true</UseWindowsForms>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DrvMqtt.Common\DrvMqtt.Common.csproj" />
+    <ProjectReference Include="..\..\..\ScadaCommon\ScadaCommon.Forms\ScadaCommon.Forms.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>    
+    <RsPath_ThisProject>$(RsPath_Git)ScadaComm\OpenDrivers\DrvDsMqtt.View\</RsPath_ThisProject>
+    <RsPath_ThisShared>$(RsPath_Git)ScadaComm\OpenDrivers\DrvDsMqtt.Shared\</RsPath_ThisShared>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="$(RsPath_ThisProject)**\*.cs" Exclude="$(RsPath_ThisProject)obj\**;$(RsPath_ThisProject)bin\**" />
+    <Compile Include="$(RsPath_ThisShared)**\*.cs" />
+  </ItemGroup>
+  
+</Project>

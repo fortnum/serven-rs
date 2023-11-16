@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Scada.Comm.Drivers.DrvMqtt</RootNamespace>
+    <Version>6.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MQTTnet" Version="4.1.4.563" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ScadaComm\ScadaCommCommon\ScadaCommCommon.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <RsPath_ThisProject>$(RsPath_Git)ScadaComm\OpenDrivers\DrvMqtt.Common\</RsPath_ThisProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="$(RsPath_ThisProject)**\*.cs" Exclude="$(RsPath_ThisProject)obj\**;$(RsPath_ThisProject)bin\**" />
+  </ItemGroup>
+  
+</Project>
