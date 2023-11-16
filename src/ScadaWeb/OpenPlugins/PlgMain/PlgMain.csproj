@@ -13,7 +13,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PlgMain.Report\PlgMain.Report.csproj" />
-    <ProjectReference Include="..\PlgMain.View\PlgMain.View.csproj" />
+    <ProjectReference Include="..\PlgMain.Common\PlgMain.Common.csproj" />
+    <ProjectReference Include="..\..\ScadaWeb\ScadaWebCommon\ScadaWebCommon.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <AssemblyName>ServenViewExplorerPlugin</AssemblyName>
+    <AssemblyName>PlgServenViewExplorer</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,7 +13,11 @@
   <ItemGroup>
     <ProjectReference Include="..\..\ScadaWeb\ScadaWeb\ScadaWebCommon\ScadaWebCommon.csproj" />
   </ItemGroup>
-
+    
+  <ItemGroup>
+    <Folder Include="$([System.IO.Directory]::GetDirectories('$(MSBuildProjectDirectory)\viewMenu', '*', SearchOption.AllDirectories))" IsViewMenuFolder="true" />
+  </ItemGroup>
+    
   <Target Name="Coerce_ResolveProjectStaticWebAssets_ScopeNest_RelativePath" AfterTargets="ResolveProjectStaticWebAssets">
     <ItemGroup>
       <StaticWebAsset RelativePath="plugins/@serven/viewExplorerPlugin/%(RelativePath)" />
@@ -24,6 +28,11 @@
     <ItemGroup>
       <ContentWithTargetPath Update="@(StaticWebAsset)" TargetPath="plugins/@serven/viewExplorerPlugin/%(TargetPath)" />
     </ItemGroup>
+  </Target>
+
+  <Target Name="HandleViewMenu" BeforeTargets="CheckForDuplicateItems">
+    <WriteLinesToFile File="$([System.IO.Path]::Combine('%(Folder.Identity)', menuItem.json))" Overwrite="true" Lines="{;  ;}"
+                      Condition="'%(Folder.IsViewMenuFolder)' == 'true' and !Exists($([System.IO.Path]::Combine('%(Folder.Identity)', menuItem.json)))" />
   </Target>
 
 </Project>

@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>Scada.Server.Wkr</RootNamespace>
+    <Version>6.1.1</Version>
+    <AssemblyVersion>6.1.1.1</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,11 +18,12 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <OuterPath>..\..\..\..\scada-v6\ScadaServer\ScadaServer\ScadaServerWkr</OuterPath>
+    <RsPath_Git>..\..\..\..\scada-v6\</RsPath_Git>
+    <RsPath_ThisProject>$(RsPath_Git)ScadaServer\ScadaServer\ScadaServerWkr\</RsPath_ThisProject>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="$(OuterPath)\**\*.cs" Exclude="$(OuterPath)\obj\**;$(OuterPath)\bin\**" LinkBase="\" />
+    <Compile Include="$(RsPath_ThisProject)**\*.cs" Exclude="$(RsPath_ThisProject)obj\**;$(RsPath_ThisProject)bin\**" LinkBase="\" />
   </ItemGroup>
 
 </Project>

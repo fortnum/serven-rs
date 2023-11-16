@@ -37,6 +37,7 @@
     <Plugin code="PlgSchBasicComp" />
     <Plugin code="PlgStore" />
     <Plugin code="PlgWebPage" />
+    <Plugin code="ServenViewExplorerPlugin" />
   </Plugins>
   <PluginAssignment>
     <ChartFeature>PlgChart</ChartFeature>

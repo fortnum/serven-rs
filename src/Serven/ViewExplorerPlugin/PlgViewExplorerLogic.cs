@@ -6,20 +6,22 @@ using Scada.Web.Plugins;
 using Scada.Web.Services;
 using System.Diagnostics.Metrics;
 using System.Text;
+namespace Scada.Web.Plugins.PlgServenViewExplorer;
 
-namespace Scada.Web.Plugins.ServenViewExplorerPlugin;
-
-public class ServenViewExplorerPluginLogic : PluginLogic, IPageFilter, IResultFilter, IResourceFilter
+public class PlgServenViewExplorerLogic : PluginLogic, IPageFilter, IResultFilter, IResourceFilter
 {
-    public ServenViewExplorerPluginLogic(IWebContext webContext) : base(webContext)
+    public PlgServenViewExplorerLogic(IWebContext webContext) : base(webContext)
     {
+        webContext.Log.WriteLine("Hello!");
     }
+
+    public override string Code => "PlgServenViewExplorer";
 
     public override void AddFilters(FilterCollection filters)
     {
         base.AddFilters(filters);
 
-        filters.Add<ServenViewExplorerPluginLogic>();
+        filters.Add<PlgServenViewExplorerLogic>();
     }
 
     public override void AddServices(IServiceCollection services)
@@ -65,5 +67,10 @@ public class ServenViewExplorerPluginLogic : PluginLogic, IPageFilter, IResultFi
     {
     }
 
-    public override string ClientScript => "(function f(s) { $.getScript(s).fail( () => setTimeout(() => f(s), 1000) ) })('/plugins/@serven/viewExplorerPlugin/main.js')";
+    public override ICollection<string> ScriptUrls => new string[] {
+        "/plugins/@serven/viewExplorerPlugin/react.development.js",
+        "/plugins/@serven/viewExplorerPlugin/react-dom.development.js",
+        "/plugins/@serven/viewExplorerPlugin/main.js" };
+
+    //public override string ClientScript => "(function f(s) { $.getScript(s).fail( () => setTimeout(() => f(s), 1000) ) })('/plugins/@serven/viewExplorerPlugin/main.js')";
 }

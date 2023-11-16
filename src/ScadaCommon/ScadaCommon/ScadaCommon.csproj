@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Scada</RootNamespace>
+    <Version>6.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

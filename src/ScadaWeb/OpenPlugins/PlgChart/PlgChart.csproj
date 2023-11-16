@@ -13,7 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PlgChart.View\PlgChart.View.csproj" />
+    <ProjectReference Include="..\PlgChart.Common\PlgChart.Common.csproj" />
+    <ProjectReference Include="..\..\ScadaWeb\ScadaWebCommon\ScadaWebCommon.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
