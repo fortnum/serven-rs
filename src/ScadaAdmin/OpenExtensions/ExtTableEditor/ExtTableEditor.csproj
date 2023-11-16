@@ -18,7 +18,6 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <RsPath_Git>..\..\..\..\scada-v6\</RsPath_Git>
     <RsPath_ThisProject>$(RsPath_Git)ScadaAdmin\OpenExtensions\ExtTableEditor\</RsPath_ThisProject>
   </PropertyGroup>
 

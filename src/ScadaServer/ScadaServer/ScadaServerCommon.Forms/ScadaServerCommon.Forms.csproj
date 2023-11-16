@@ -13,7 +13,6 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <RsPath_Git>..\..\..\..\scada-v6\</RsPath_Git>
     <RsPath_ThisProject>$(RsPath_Git)ScadaServer\ScadaServer\ScadaServerCommon.Forms\</RsPath_ThisProject>
   </PropertyGroup>
 

@@ -15,7 +15,6 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <RsPath_Git>..\..\..\..\scada-v6\</RsPath_Git>
     <RsPath_ThisProject>$(RsPath_Git)ScadaServer\OpenModules\ModArcPostgreSql.Logic\</RsPath_ThisProject>
     <RsPath_ThisShared>$(RsPath_Git)ScadaServer\OpenModules\ModArcPostgreSql.Shared\</RsPath_ThisShared>
   </PropertyGroup>
